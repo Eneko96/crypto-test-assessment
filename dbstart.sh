@@ -5,7 +5,7 @@
 # so we wait for 5 seconds
 
 # then we execute the rs-init.sh script which will create the replica set and set the primary
-
+docker-compose build
 docker-compose up -d
 
 sleep 5

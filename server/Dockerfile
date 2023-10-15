@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:14
+FROM node:18-alpine
 ENV NODE_ENV=production
 WORKDIR /home/app
 
@@ -7,7 +7,7 @@ RUN mkdir -p home/app
 
 
 
-RUN yarn global add @nestjs/cli
+RUN yarn global add @nestjs/cli@9.0.0
 RUN yarn install --frozen-lockfile --production
 RUN yarn build
 
